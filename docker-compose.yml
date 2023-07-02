@@ -1,0 +1,9 @@
+version: '3'
+services:
+  myapp:
+    build:
+      context: .
+    network_mode: "host"
+    environment:
+      - APP_ID=your_appid_value
+      - APP_KEY=your_appkey_value

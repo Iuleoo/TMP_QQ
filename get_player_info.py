@@ -118,8 +118,9 @@ def translate_local(text):
 
 def translate_baidu(text):
     # 设置百度翻译API的参数
-    appid = ''
-    appkey = ''
+    # 获取环境变量的值
+    appid = os.environ.get('APP_ID')
+    appkey = os.environ.get('APP_KEY')
     from_lang = 'en'
     to_lang = 'zh'
     endpoint = 'http://api.fanyi.baidu.com'
