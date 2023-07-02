@@ -1,0 +1,40 @@
+{
+    "response": {
+        "name": "薛 之 谦",
+        "online": true,
+        "x": 45114,
+        "y": -111382,
+        "mp_id": 3698300,
+        "p_id": 92,
+        "time": 1688274921,
+        "server": 50,
+        "heading": 2.5525725,
+        "serverDetails": {
+            "_id": "5daafa0c5dfd083858bb8075",
+            "id": 50,
+            "name": "Promods",
+            "game": "ETS2",
+            "shortname": "EU PM",
+            "apiserverid": 31,
+            "trucks": 306,
+            "code": "eupromods1",
+            "order": 5,
+            "active": true,
+            "mod": "promods",
+            "event": false
+        },
+        "location": {
+            "resolved": true,
+            "area": true,
+            "distance": 0,
+            "poi": {
+                "_id": "f127f3b6-1c74-447a-a5c4-ab717bc7eea9",
+                "realName": "Kirkenes - Quarry",
+                "country": "Norway",
+                "dlc": "Promods",
+                "game": "ets2",
+                "type": "road"
+            }
+        }
+    }
+}

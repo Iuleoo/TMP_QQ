@@ -5,6 +5,7 @@ from get_player_lookup import get_player_lookup
 from get_current_version import get_current_version
 from get_traffic_top import get_traffic_top
 from get_server_status import get_server_status
+from help import help
 
 app = Flask(__name__)
 
@@ -48,17 +49,23 @@ def qqbot():
             resp = requests.get(
                 "http://127.0.0.1:5700/send_group_msg?group_id={0}&message={1}".format(qq_qun_id, version_info))
 
-        if "交通信息" in qq_message:
+        if "路况S1" in qq_message:
             traffic_info = get_traffic_top()  # 调用函数获取交通信息
 
             resp = requests.get(
                 "http://127.0.0.1:5700/send_group_msg?group_id={0}&message={1}".format(qq_qun_id, traffic_info))
 
-        if "服务器状态" in qq_message:
+        if "服务器" in qq_message:
             status_info = get_server_status()  # 调用函数获取服务器信息
 
             resp = requests.get(
                 "http://127.0.0.1:5700/send_group_msg?group_id={0}&message={1}".format(qq_qun_id, status_info))
+
+        if "HELP" in qq_message:
+            help_info = help()  # 调用函数获取服务器信息
+
+            resp = requests.get(
+                "http://127.0.0.1:5700/send_group_msg?group_id={0}&message={1}".format(qq_qun_id, help_info))
 
     return p
 
